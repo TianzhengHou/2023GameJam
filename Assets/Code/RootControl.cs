@@ -5,11 +5,15 @@ using UnityEngine;
 public class RootControl : MonoBehaviour
 {
     public float distance = -0.1f;
+    public Transform root;
+    public Transform orgion;
+
+    public GameObject Root;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+ 
     }
 
     // Update is called once per frame
@@ -24,6 +28,14 @@ public class RootControl : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Hit");
+        root.position = orgion.position;
+        //Instantiate(root, orgion.position, Quaternion.identity);
+        //Destroy(this.gameObject);
     }
 
 }
