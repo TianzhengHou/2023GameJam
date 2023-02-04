@@ -9,11 +9,13 @@ public class RootControl : MonoBehaviour
     public Transform orgion;
 
     public GameObject Root;
+    public TrailRenderer tr;
 
     // Start is called before the first frame update
     void Start()
     {
- 
+	    tr = GetComponent<TrailRenderer>();
+	
     }
 
     // Update is called once per frame
@@ -34,6 +36,8 @@ public class RootControl : MonoBehaviour
     {
         Debug.Log("Hit");
         root.position = orgion.position;
+	tr.Clear();
+	
         //Instantiate(root, orgion.position, Quaternion.identity);
         //Destroy(this.gameObject);
     }
