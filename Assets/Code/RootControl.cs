@@ -15,9 +15,15 @@ public class RootControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.DownArrow))
+        transform.position = transform.position + new Vector3(0.0f, distance * Time.deltaTime, 0.0f);
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position = transform.position + new Vector3(0.0f, distance, 0.0f);
+            transform.position = transform.position + new Vector3(distance * Time.deltaTime, 0.0f, 0.0f);
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
     }
+
 }
