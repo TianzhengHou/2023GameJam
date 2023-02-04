@@ -30,7 +30,12 @@ public class RootControl : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
+	if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+	{
+		transform.position = transform.position + new Vector3(0.0f, -2 * (distance * Time.deltaTime), 0.0f);
+	}
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
