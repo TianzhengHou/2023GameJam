@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RootControl : MonoBehaviour
 {
-    public float distance = -0.1f;
+    public float distance = -2f; //larger - number speeds up root movement
     public Transform root;
     public Transform orgion;
 
