@@ -22,11 +22,11 @@ public class RootControl : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + new Vector3(0.0f, distance * Time.deltaTime, 0.0f);
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.position = transform.position + new Vector3(distance * Time.deltaTime, 0.0f, 0.0f);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
