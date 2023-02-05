@@ -22,6 +22,7 @@ public class ScoreControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = rootControl.transform.position + new Vector3(8.5f, 4.5f, 0);
         m_TextComponent.text = "Score: " + (int)scoreAmount;
         scoreAmount = -1 * rootControl.transform.position.y;
     }
