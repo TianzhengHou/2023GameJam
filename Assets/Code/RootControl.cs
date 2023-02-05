@@ -43,11 +43,6 @@ public class RootControl : MonoBehaviour
         Debug.Log("Hit");
         root.position = orgion.position;
 	    tr.Clear();
-
-
-	
-        Instantiate(root, orgion.position, Quaternion.identity);
-        Destroy(this.gameObject);
     }
 
 }
