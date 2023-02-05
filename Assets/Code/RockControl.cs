@@ -20,6 +20,8 @@ public class RockControl : MonoBehaviour
         GameObject gameObject = Instantiate(rock) as GameObject;
         Vector3 rootPos = GameObject.Find("Root").transform.position;
         gameObject.transform.position = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), rootPos.y - 5.5f,-1);
+	float scaleFactor = Random.Range(0.1f, 1f); 
+	gameObject.transform.localScale = new Vector3(scaleFactor, scaleFactor, 0);
     }
 
     IEnumerator rockWave()
