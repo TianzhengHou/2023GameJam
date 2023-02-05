@@ -8,6 +8,7 @@ public class ScoreControl : MonoBehaviour
     private TMP_Text m_TextComponent;
     public float scoreAmount;
     public float incresePerSecond;
+    public RootControl rootControl;
 
     // Start is called before the first frame update
     void Start()
@@ -15,12 +16,13 @@ public class ScoreControl : MonoBehaviour
         m_TextComponent = GetComponent<TMP_Text>();
         scoreAmount = 0f;
         incresePerSecond = 1f;
+        rootControl = GameObject.FindObjectOfType<RootControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
         m_TextComponent.text = "Score: " + (int)scoreAmount;
-        scoreAmount += incresePerSecond * Time.deltaTime;
+        scoreAmount = -1 * rootControl.transform.position.y;
     }
 }
