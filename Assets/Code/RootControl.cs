@@ -46,8 +46,8 @@ public class RootControl : MonoBehaviour
 
 
 	
-        Instantiate(root, orgion.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        //Instantiate(root, orgion.position, Quaternion.identity);
+        //Destroy(this.gameObject);
     }
 
 }
