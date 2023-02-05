@@ -964,7 +964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: {fileID: 867052551}
   spowend: 0
-  respawnTime: 1
+  respawnTime: 0.5
 --- !u!1 &1277997601
 GameObject:
   m_ObjectHideFlags: 0
