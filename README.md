@@ -9,4 +9,8 @@ Have FUN!
 
 Authors:
 * Moses Tong
+* Plinson Costa
+* Jun Gao
+* Austin Putland
+* Tianzheng Hou
 
