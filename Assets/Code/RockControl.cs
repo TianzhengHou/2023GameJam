@@ -33,8 +33,9 @@ public class RockControl : MonoBehaviour
             spawnRock();
             spowend = true;
 
-            yield return new WaitForSeconds(10);
-            Destroy(this.gameObject);
+	    // Code to destroy rocks every 10 seconds
+        //     yield return new WaitForSeconds(10);
+        //    Destroy(this.gameObject);
         }
     }
 
