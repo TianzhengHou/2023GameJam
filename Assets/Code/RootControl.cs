@@ -22,15 +22,15 @@ public class RootControl : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + new Vector3(0.0f, distance * Time.deltaTime, 0.0f);
-        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && transform.position.x > -27)
         {
             transform.position = transform.position + new Vector3(distance * Time.deltaTime, 0.0f, 0.0f);
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && transform.position.x < 28)
         {
             transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
-	if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && transform.position.y <= 0)
+	if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && transform.position.y < -1)
 	{
 		transform.position = transform.position + new Vector3(0.0f, -2 * (distance * Time.deltaTime), 0.0f);
 	}
@@ -44,8 +44,8 @@ public class RootControl : MonoBehaviour
         root.position = orgion.position;
 	tr.Clear();
 	
-        //Instantiate(root, orgion.position, Quaternion.identity);
-        //Destroy(this.gameObject);
+        Instantiate(root, orgion.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 
 }
