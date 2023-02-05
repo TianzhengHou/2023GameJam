@@ -30,7 +30,7 @@ public class RootControl : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(-(distance * Time.deltaTime), 0.0f, 0.0f);
         }
-	if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+	if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && transform.position.y <= 0)
 	{
 		transform.position = transform.position + new Vector3(0.0f, -2 * (distance * Time.deltaTime), 0.0f);
 	}
