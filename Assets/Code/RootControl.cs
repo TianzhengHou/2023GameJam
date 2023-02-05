@@ -34,6 +34,7 @@ public class RootControl : MonoBehaviour
 	{
 		transform.position = transform.position + new Vector3(0.0f, -2 * (distance * Time.deltaTime), 0.0f);
 	}
+
     }
 
 
