@@ -1,5 +1,16 @@
 # 2023GameJam
-This is 2023 Global Game Jam
+This is our 2023 Global Game Jam game.
+
+You are a root.
+
+Your objective is to dodge the rocks while tunneling underground. 
+
+Have FUN!
 
 Authors:
-Moses Tong
+* Moses Tong
+* Plinson Costa
+* Jun Gao
+* Austin Putland
+* Tianzheng Hou
+
